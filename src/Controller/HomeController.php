@@ -21,15 +21,15 @@ class HomeController extends AbstractController
         ]);
     }
 
-        /**
-     * @Route("/{slug}")
-     */
-    public function show($slug)
-    {
+    //     /**
+    //  * @Route("/{slug}")
+    //  */
+    // public function show($slug)
+    // {
 
-        return new Response(sprintf(
-            'One day this page will show some kewl stuff, like: %s',
-            $slug
-        ));
-    }
+    //     return new Response(sprintf(
+    //         'One day this page will show some kewl stuff, like: %s',
+    //         $slug
+    //     ));
+    // }
 }

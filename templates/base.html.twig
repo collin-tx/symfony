@@ -2,11 +2,24 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        <title>{% block title %}{% endblock %}</title>
+        {% block stylesheets %}
+            <link rel="stylesheet" href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css'></link>
+        {% endblock %}
     </head>
     <body>
+        <header>
+            <nav>
+                <ul class="list-group flex-row">
+                    <li><a href="/" class="list-group-item">Home</a></li>
+                    <li><a href="/blog" class="list-group-item">Blog</a></li>
+                    <li><a href="#" class="list-group-item">About</a></li>
+                    <li><a href="#" class="list-group-item">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
         {% block body %}{% endblock %}
+        <footer></footer>
         {% block javascripts %}{% endblock %}
     </body>
 </html>

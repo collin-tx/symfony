@@ -1,2 +1,33 @@
-<p>here's a list</p>
-<ul>{{ list }}</ul>
+{% extends 'base.html.twig' %}
+
+{% block title %}
+blog!
+{% endblock %}
+
+{% block body %}
+
+  <h1 class="text-center m-5">{{ title }}</h1>
+
+  <div class="text-justify ml-5 mr-5">
+
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione assumenda eius numquam quae doloribus enim voluptatum hic tempora dolorem vitae, sequi harum optio provident, animi adipisci dignissimos culpa perspiciatis libero?
+  Ut illo nemo quaerat aliquid maiores soluta distinctio delectus ad ea officia! Assumenda atque at nulla, fuga quis modi adipisci, numquam ad dicta cupiditate delectus voluptas cumque quas, unde qui.</p>
+
+    <p>Dolores non ad animi eveniet eligendi accusantium expedita aut corporis quisquam id soluta, nulla impedit sapiente, ipsam, distinctio odio aliquid accusamus iure illo! Blanditiis maxime distinctio aliquid asperiores ea? Sunt!
+  Tempore dicta accusamus sint nisi non iusto aliquam eos provident praesentium reprehenderit quia dolores, voluptatibus, laborum sit.</p>
+
+    <p> Accusamus, accusantium, sed quos id nulla autem eaque enim quasi illum itaque rerum.
+  Ipsum molestiae, quis tempore natus cumque ea? Aut tempora atque aliquid perspiciatis natus laboriosam cumque excepturi incidunt, harum maxime nulla vel sed, id velit veritatis voluptatem? Illum ipsa hic libero?</p>
+
+  </div>
+
+<div class="text-center">
+  <h2 class="m-5">Comments ({{ comments|length }})</h2>
+  <ul class="list-group">
+    {% for comment in comments %}
+      <li class="list-group-item">{{ comment }}</li>
+    {% endfor %}
+  </ul>
+</div>
+
+{% endblock %}
