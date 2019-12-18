@@ -2,16 +2,16 @@
 
 namespace App\Controller;
 
-use Symfony\Component\HttpFoundation\Response;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
-class HomeController
+class HomeController extends AbstractController
 {
     public function home()
     {
         $text = 'hello world';
 
-        return new Response(
-            '<html><body>'.$text.'</body></html>'
-        );
+        return $this->render('home/home.html.twig', [
+            'text' => $text,
+        ]);
     }
 }
